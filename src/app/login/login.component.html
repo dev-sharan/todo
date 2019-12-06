@@ -1,1 +1,17 @@
-<p>login works!</p>
+<h1>Login</h1>
+<br><br>
+<div class="container d-flex justify-content-center">
+	<h3>username: </h3>
+	<input type="text" name="username" [(ngModel)]="username">
+
+	<br><br>
+
+	<h3>password: </h3>
+	<input type="text" name="password" [(ngModel)]="password">
+	<br><br>
+	<button (click) = "onBtnClick()" class="btn btn-primary">Login</button>
+</div>
+<br><br>
+<div class="container d-flex justify-content-center">
+  <h5 *ngIf="invalidMsg !== ''" class="text-muted">{{invalidMsg}}</h5>
+</div>
