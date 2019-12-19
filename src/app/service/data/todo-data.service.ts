@@ -13,4 +13,8 @@ export class TodoDataService {
     return this.httpClient.get<Todo[]>(`https://8080-f5233174-1bd3-4077-b0a1-0a846cbf243c.ws-ap01.gitpod.io/users/${username}/todos`);
   }
 
+  deleteTodoById(username, id) {
+    return this.httpClient.delete(`https://8080-f5233174-1bd3-4077-b0a1-0a846cbf243c.ws-ap01.gitpod.io/users/${username}/todos/${id}`);
+  }
+
 }
