@@ -11,4 +11,8 @@ export class WelcomeDataService {
   executeHelloWorldBeanService() {
     return this.httpClient.get('https://8080-f5233174-1bd3-4077-b0a1-0a846cbf243c.ws-ap01.gitpod.io/hello-world-bean');
   }
+
+  executeHelloWorldBeanServiceWithPathVariable(name) {
+    return this.httpClient.get(`https://8080-f5233174-1bd3-4077-b0a1-0a846cbf243c.ws-ap01.gitpod.io/hello-world/path-variable/${name}`);
+  }
 }

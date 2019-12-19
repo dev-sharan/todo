@@ -11,3 +11,15 @@ manage your todos : <a routerLink="/todos">here</a>
 <div class="container" *ngIf="message">
  {{ message }}
 </div>
+<br>
+<br>
+ Enter name here
+<input type="text" name="nameinp" [(ngModel)] = "name">
+<div class="container">
+  click here to get a parameterised welcome message
+  <button (click) = "getWelcomeMsgWithParam()" class="btn btn-success">get welcome msg</button>
+</div>
+
+<div class="container" *ngIf="name">
+ {{ name }}
+</div>
