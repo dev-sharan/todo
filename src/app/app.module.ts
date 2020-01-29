@@ -40,11 +40,11 @@ import { HttpIntercepterBasicAuthService } from './service/http/http-intercepter
       provide: LocationStrategy,
       useClass:  HashLocationStrategy
     },
-    {
+    /* {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpIntercepterBasicAuthService,
       multi: true
-    }
+    } */
   ],
   bootstrap: [AppComponent]
 })
